@@ -704,3 +704,24 @@ select.fi option { background: var(--bg3); }
   border-color: var(--accent2);
   color: var(--accent2);
 }
+
+/* Legal / fan-content disclaimer footer */
+.legal-footer {
+  padding: 14px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.legal-footer a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.legal-footer a:hover {
+  color: var(--accent2);
+}

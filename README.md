@@ -73,8 +73,17 @@ Parts of this project were written or refined with the help of [Claude](https://
 
 The CRT scanline effect is based on a [CodePen by @thisanimus](https://codepen.io/thisanimus/pen/OJpaqWz).
 
-## License
+## License & Legal
 
-This tool is fan-made and unofficial. LANCER is published by [Massif Press](https://massifpress.com).
-</content>
-</invoke>
+The original source code of this project is released under the [MIT License](LICENSE).
+
+**This is an unofficial, fan-made tool.** It is not affiliated with, endorsed by, or
+sponsored by Massif Press. *LANCER*, *HORUS*, *Comp/Con*, and related names and marks are
+the property of [Massif Press](https://massifpress.com) and are used here purely for
+compatibility and identification.
+
+No copyrighted LANCER game content is bundled with this tool — it ships only empty editors,
+and all content is created by you. Anything you build with it remains subject to Massif
+Press's own licensing and community-use terms.
+
+This project uses [JSZip](https://stuk.github.io/jszip/), dual-licensed under MIT and GPLv3.
