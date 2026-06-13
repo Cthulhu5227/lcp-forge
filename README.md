@@ -21,13 +21,7 @@ No build step, no backend — just vanilla JavaScript.
 
 ## Usage
 
-### Hosted (GitHub Pages)
-
-Open the page in your browser and start building.
-
-### Local
-
-Open `index.html` directly in your browser. The app is plain `<script>`-tag JavaScript with no ES modules, so it runs from `file://` (an internet connection is needed once to load JSZip from its CDN).
+Open `index.html` directly in your browser and start building. The app is plain `<script>`-tag JavaScript with no ES modules, so it runs from `file://` (an internet connection is needed once to load JSZip from its CDN).
 
 To run a local dev server instead:
 
@@ -72,50 +66,6 @@ lancer-lcp-forge/
         ├── frame.js
         └── mod.js
 ```
-
-## Adding a new entity type
-
-1. **Create the editor** — copy any file from `js/editors/` as a template.
-   Your editor must register an object on `FORGE.editors.myType` with:
-
-   | Property | Type | Description |
-   |---|---|---|
-   | `label` | string | Singular display name |
-   | `plural` | string | Plural display name for the sidebar |
-   | `storeKey` | string | Key in `FORGE.store` (e.g. `'myTypes'`) |
-   | `exportFile` | string | Filename in the LCP ZIP (e.g. `'my_types.json'`) |
-   | `icon` | string | Emoji or glyph for the sidebar |
-   | `blank()` | function | Returns a new blank item |
-   | `render(item)` | function | Returns an HTML string for the editor panel |
-   | `collect(item)` | function | Reads DOM values into the item |
-   | `summarize(item)` | function | Returns a short string for the sidebar |
-
-2. **Add the store array** — in `js/store.js`, add the key to `_persistedKeys`:
-   ```js
-   _persistedKeys: ['weapons', 'systems', 'frames', 'mods', 'myTypes'],
-   ```
-
-3. **Load the script** — in `index.html`, add it before `app.js`:
-   ```html
-   <script src="js/editors/my-type.js"></script>
-   ```
-
-4. **Register it** — in `js/app.js`, add it to the registry:
-   ```js
-   registry: [
-     // ...existing editors...
-     FORGE.editors.myType,
-   ],
-   ```
-
-The sidebar, editor panel, and export all wire up automatically.
-
-## Deploying to GitHub Pages
-
-1. Push the repository to GitHub
-2. Go to **Settings → Pages**
-3. Set Source to **Deploy from a branch**, then select your branch and `/root`
-4. Your app will be live at `https://<username>.github.io/lancer-lcp-forge/`
 
 ## Acknowledgements
 
