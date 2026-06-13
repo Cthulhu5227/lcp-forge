@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HORUS // LCP Forge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <main class = "crt">
+    <div class="app">
+
+      <header class="topbar">
+        <div class="logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <polygon points="12,2 22,7 22,17 12,22 2,17 2,7" stroke="#00cc44" stroke-width="1.5" fill="none"/>
+            <polygon points="12,7 17,10 17,14 12,17 7,14 7,10" fill="#00cc44" opacity="0.3"/>
+            <circle cx="12" cy="12" r="2.5" fill="#00cc44"/>
+          </svg>
+          HORUS <span class="logo-slash">//</span> LCP FORGE
+        </div>
+        <span class="logo-sub">COMP/CON CONTENT PACKAGE BUILDER</span>
+
+        <div class="topbar-right">
+          <button class="topbar-btn" onclick="FORGE.store.clear()">Clear All</button>
+          <span class="badge-ver">v2.0.0</span>
+        </div>
+      </header>
+
+      <aside class="sidebar" id="sidebar">
+        <!-- Rendered by js/sidebar.js -->
+      </aside>
+
+      <main class="main" id="main">
+        <div class="placeholder">
+          <p class="placeholder-text">Select a category and create an item</p>
+          <p class="placeholder-hint">Your work is auto-saved in the browser</p>
+        </div>
+      </main>
+
+    </div>
+  </main>
+
+  <!--
+    Load Data first, dependencies in other files
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/zip.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/editors/weapon.js"></script>
+  <script src="js/editors/system.js"></script>
+  <script src="js/editors/frame.js"></script>
+  <script src="js/editors/mod.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/starfield.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
